@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Contact Us !</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/contact.css">
+    <script src="../static/contactscript.js"></script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <i>Breast Cancer</i>
+        <a href="/contact">Contact Us</a>
+        <a href="/about">About Me</a>
+        <a href="/" class="active">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="container">
+
+        <div class="heading">
+            <h2> Contact Me</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <form id="contact-form" action="/contact" method="POST" role="form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="firstname">Name <span class="blue">*</span></label>
+                            <input required type="text" name="firstname" class="form-control"
+                                placeholder="Enter your firstname" id="firstname" value="">
+                            <p class="comments"> </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="lastname">Surname <span class="blue">*</span></label>
+                            <input required type="text" name="name" class="form-control" placeholder="Your Lastname"
+                                id="name" value=" ">
+                            <p class="comments"> </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email">Email <span class="blue">*</span></label>
+                            <input required type="email" name="email" class="form-control" placeholder="enter email"
+                                id="email" value=" ">
+                            <p class="comments"> </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="phone">Telephone</span></label>
+                            <input type="tel" name="phone" class="form-control" placeholder="enter telephone" id="phone"
+                                value=" ">
+                            <p class="comments"> </p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="message">Message <span class="blue">*</span></label>
+                            <textarea required name="message" id="message" class="form-control"
+                                placeholder="write message" rows="4"> </textarea>
+                            <p class="comments"> </p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p class="blue"><strong> * All fields are mendatory !</strong> </p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <!-- <input type="submit" class="button1"> -->
+                            <a class="button_css"
+                    target="_blank" rel="nofollow noopener">
+                    <button type="submit" class="btn btn-success btn-block btn-large">Submit</button></a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</html>

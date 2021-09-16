@@ -46,7 +46,6 @@ def contact():
         return render_template("contact.html")
 
 @app.route("/predict", methods = ["GET", "POST"])
-@cross_origin()
 def predict():
     if request.method =="POST":
 
@@ -64,10 +63,13 @@ def predict():
         'worst concave points', 'worst symmetry', 'worst fractal dimension']
         
         df = pd.DataFrame(features_value, columns=features_name)
-        output = model.predict(df)
+        # print(df)
+        output = model.predict(df)[0]
+        # print(output)
+        # print("asbhs")
             
-        if output == 0:
-            res_val = "** breast cancer **"
+        if output == 'M':
+            res_val = " breast cancer "
         else:
             res_val = "no breast cancer"
             
